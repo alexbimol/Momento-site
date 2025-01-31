@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">О нас - Momento Cafe Bar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #800020;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .language-buttons {
+            margin-top: 10px;
+        }
+        .language-buttons button {
+            background-color: #800020;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .language-buttons button:hover {
+            background-color: #5b0012;
+            transform: scale(1.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 12px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+        nav a:hover {
+            color: #800020;
+            border-bottom: 2px solid #800020;
+        }
+        section {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+            max-width: 1200px;
+        }
+        section h2 {
+            color: #800020;
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        .footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            section {
+                width: 90%;
+            }
+            .language-buttons button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+            section {
+                width: 95%;
+            }
+            .language-buttons button {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="about-header">О нас</h1>
+        <div class="language-buttons">
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('el')">Ελληνικά</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" id="main-link">Главная</a>
+        <a href="menu.html" id="menu-link">Меню</a>
+        <a href="contact.html" id="contact-link">Контакты</a>
+        <a href="social.html" id="social-link">Соцсети</a>
+    </nav>
+    <section>
+        <h2 id="about-title">О Momento Cafe Bar</h2>
+        <p id="about-text1">Momento Cafe Bar — это не просто кафе и бар, это место, где каждый момент превращается в особенное событие. Мы создаем атмосферу уюта и веселья для всех наших гостей, предоставляя отличный сервис и лучшие напитки.</p>
+        <p id="about-text2">С самого утра мы открываем свои двери для тех, кто ищет спокойного утра с чашечкой ароматного кофе. У нас вы можете найти не только любимые напитки, но и уникальные коктейли, приготовленные нашими барменами.</p>
+        <p id="about-text3">Наши гости могут наслаждаться лучшими коктейлями, живыми выступлениями и атмосферой веселья каждую неделю. В пятницу и субботу здесь всегда играет живая музыка или диджей-сеты.</p>
+        <p id="about-text4">Для тех, кто не успевает посетить нас лично, мы предоставляем доставку любимых напитков прямо на дом. Просто сделайте заказ, и мы привезем вам кофе, коктейли и многое другое.</p>
+        <p id="about-text5">Momento Cafe Bar — это место, где каждый найдет свою порцию счастья. Мы приглашаем вас в мир уюта, музыки и прекрасных напитков.</p>
+        <p id="about-text6">Мы работаем 7 дней в неделю с 8 утра до последнего клиента, всегда готовые предоставить вам лучшее обслуживание и атмосферу для отдыха.</p>
+    </section>
+    <div class="footer">
+        <p>© 2025 Momento Cafe Bar. Все права защищены.</p>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "About Us",
+                aboutHeader: "About Us",
+                mainLink: "Home",
+                menuLink: "Menu",
+                contactLink: "Contact",
+                socialLink: "Social Media",
+                aboutTitle: "About Momento Cafe Bar",
+                aboutText1: "Momento Cafe Bar is more than just a cafe and bar. It’s a place where every moment becomes a special event. We create an atmosphere of comfort and fun for all our guests, providing excellent service and the best drinks.",
+                aboutText2: "From the early morning, we open our doors for those looking for a peaceful morning with a cup of aromatic coffee. Here, you can find not only your favorite drinks but also unique cocktails prepared by our bartenders.",
+                aboutText3: "Our guests can enjoy the best cocktails, live performances, and a festive atmosphere every week. On Fridays and Saturdays, live music or DJ sets are always playing here.",
+                aboutText4: "For those who can’t visit us in person, we offer delivery of your favorite drinks right to your home. Simply place an order, and we will bring you coffee, cocktails, and more.",
+                aboutText5: "Momento Cafe Bar is a place where everyone can find their share of happiness. We invite you to a world of comfort, music, and amazing drinks.",
+                aboutText6: "We are open 7 days a week from 8 AM until the last guest, always ready to provide you with the best service and a relaxing atmosphere."
+            },
+            ru: {
+                pageTitle: "О нас",
+                aboutHeader: "О нас",
+                mainLink: "Главная",
+                menuLink: "Меню",
+                contactLink: "Контакты",
+                socialLink: "Соцсети",
+                aboutTitle: "О Momento Cafe Bar",
+                aboutText1: "Momento Cafe Bar — это не просто кафе и бар, это место, где каждый момент превращается в особенное событие. Мы создаем атмосферу уюта и веселья для всех наших гостей, предоставляя отличный сервис и лучшие напитки.",
+                aboutText2: "С самого утра мы открываем свои двери для тех, кто ищет спокойного утра с чашечкой ароматного кофе. У нас вы можете найти не только любимые напитки, но и уникальные коктейли, приготовленные нашими барменами.",
+                aboutText3: "Наши гости могут наслаждаться лучшими коктейлями, живыми выступлениями и атмосферой веселья каждую неделю. В пятницу и субботу здесь всегда играет живая музыка или диджей-сеты.",
+                aboutText4: "Для тех, кто не успевает посетить нас лично, мы предоставляем доставку любимых напитков прямо на дом. Просто сделайте заказ, и мы привезем вам кофе, коктейли и многое другое.",
+                aboutText5: "Momento Cafe Bar — это место, где каждый найдет свою порцию счастья. Мы приглашаем вас в мир уюта, музыки и прекрасных напитков.",
+                aboutText6: "Мы работаем 7 дней в неделю с 8 утра до последнего клиента, всегда готовые предоставить вам лучшее обслуживание и атмосферу для отдыха."
+            },
+            el: {
+                pageTitle: "Σχετικά με εμάς",
+                aboutHeader: "Σχετικά με εμάς",
+                mainLink: "Αρχική",
+                menuLink: "Μενού",
+                contactLink: "Επικοινωνία",
+                socialLink: "Κοινωνικά μέσα",
+                aboutTitle: "Σχετικά με το Momento Cafe Bar",
+                aboutText1: "Το Momento Cafe Bar δεν είναι απλώς ένα καφέ και μπαρ. Είναι ένας χώρος όπου κάθε στιγμή γίνεται ξεχωριστή εμπειρία. Δημιουργούμε ατμόσφαιρα άνεσης και διασκέδασης για όλους τους επισκέπτες μας, παρέχοντας άριστη εξυπηρέτηση και τα καλύτερα ποτά.",
+                aboutText2: "Ανοίγουμε τις πόρτες μας από νωρίς για όσους αναζητούν μια ήρεμη πρωινή ώρα με ένα φλιτζάνι αρωματικού καφέ. Εδώ, μπορείτε να βρείτε όχι μόνο τα αγαπημένα σας ποτά, αλλά και μοναδικά κοκτέιλ που ετοιμάζουν οι μπάρμεν μας.",
+                aboutText3: "Οι επισκέπτες μας μπορούν να απολαύσουν τα καλύτερα κοκτέιλ, ζωντανές παραστάσεις και μια ατμόσφαιρα διασκέδασης κάθε εβδομάδα. Παρασκευές και Σάββατα, πάντα παίζει ζωντανή μουσική ή DJ σετ.",
+                aboutText4: "Για όσους δεν μπορούν να μας επισκεφτούν προσωπικά, προσφέρουμε παράδοση των αγαπημένων σας ποτών κατευθείαν στο σπίτι σας. Απλά κάντε την παραγγελία σας και θα σας φέρουμε καφέ, κοκτέιλ και πολλά άλλα.",
+                aboutText5: "Το Momento Cafe Bar είναι ένας χώρος όπου ο καθένας μπορεί να βρει το μερίδιό του στην ευτυχία. Σας προσκαλούμε σε έναν κόσμο άνεσης, μουσικής και υπέροχων ποτών.",
+                aboutText6: "Είμαστε ανοιχτά 7 ημέρες την εβδομάδα από τις 8 το πρωί μέχρι τον τελευταίο πελάτη, πάντα έτοιμοι να σας προσφέρουμε την καλύτερη εξυπηρέτηση και μια χαλαρωτική ατμόσφαιρα."
+            }
+        };
+
+        function changeLanguage(language) {
+            document.getElementById('page-title').textContent = translations[language].pageTitle;
+            document.getElementById('about-header').textContent = translations[language].aboutHeader;
+            document.getElementById('main-link').textContent = translations[language].mainLink;
+            document.getElementById('menu-link').textContent = translations[language].menuLink;
+            document.getElementById('contact-link').textContent = translations[language].contactLink;
+            document.getElementById('social-link').textContent = translations[language].socialLink;
+            document.getElementById('about-title').textContent = translations[language].aboutTitle;
+            document.getElementById('about-text1').textContent = translations[language].aboutText1;
+            document.getElementById('about-text2').textContent = translations[language].aboutText2;
+            document.getElementById('about-text3').textContent = translations[language].aboutText3;
+            document.getElementById('about-text4').textContent = translations[language].aboutText4;
+            document.getElementById('about-text5').textContent = translations[language].aboutText5;
+            document.getElementById('about-text6').textContent = translations[language].aboutText6;
+        }
+    </script>
+</body>
+</html>

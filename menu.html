@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Меню - Momento Cafe Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #800020;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+        nav a:hover {
+            color: #800020;
+            border-bottom: 2px solid #800020;
+        }
+        section {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .menu-image {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000;
+            color: #fff;
+            margin-top: 30px;
+        }
+        .language-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .language-buttons button {
+            background-color: #800020;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .language-buttons button:hover {
+            background-color: #000;
+        }
+
+        /* Медиазапросы для адаптивности */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            section {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 8px;
+            }
+            section {
+                width: 95%;
+            }
+            .language-buttons button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="menu-header">Меню</h1>
+        <div class="language-buttons">
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('el')">Ελληνικά</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" id="main-link">Главная</a>
+        <a href="about.html" id="about-link">О нас</a>
+        <a href="contact.html" id="contact-link">Контакты</a>
+        <a href="social.html" id="social-link">Соцсети</a>
+    </nav>
+    <section>
+        <!-- Изображение меню -->
+        <img src="images/image3.png" alt="Меню" class="menu-image">
+    </section>
+    <div class="footer">
+        <p>© 2025 Momento Cafe Bar. Все права защищены.</p>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Menu - Momento Cafe Bar",
+                menuHeader: "Menu",
+                mainLink: "Home",
+                aboutLink: "About Us",
+                contactLink: "Contact",
+                socialLink: "Social Media"
+            },
+            ru: {
+                pageTitle: "Меню - Momento Cafe Bar",
+                menuHeader: "Меню",
+                mainLink: "Главная",
+                aboutLink: "О нас",
+                contactLink: "Контакты",
+                socialLink: "Соцсети"
+            },
+            el: {
+                pageTitle: "Μενού - Momento Cafe Bar",
+                menuHeader: "Μενού",
+                mainLink: "Αρχική",
+                aboutLink: "Σχετικά με εμάς",
+                contactLink: "Επικοινωνία",
+                socialLink: "Κοινωνικά μέσα"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const translation = translations[lang];
+            document.getElementById('page-title').innerText = translation.pageTitle;
+            document.getElementById('menu-header').innerText = translation.menuHeader;
+            document.getElementById('main-link').innerText = translation.mainLink;
+            document.getElementById('about-link').innerText = translation.aboutLink;
+            document.getElementById('contact-link').innerText = translation.contactLink;
+            document.getElementById('social-link').innerText = translation.socialLink;
+        }
+    </script>
+</body>
+</html>

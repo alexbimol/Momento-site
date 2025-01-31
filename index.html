@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento Cafe Bar - Главная</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Белый фон */
+            color: #333; /* Темный текст */
+        }
+        header {
+            background-color: #800020; /* Бордовый */
+            color: #fff; /* Белый текст */
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        nav {
+            text-align: center;
+            background-color: #000; /* Черный фон */
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff; /* Белый текст */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #800020; /* Бордовый при наведении */
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .container h2 {
+            color: #800020; /* Бордовый заголовок */
+            font-size: 2em;
+        }
+        .container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000; /* Черный фон */
+            color: #fff; /* Белый текст */
+            margin-top: 30px;
+        }
+        .language-switcher {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .language-switcher button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #800020; /* Бордовый */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .language-switcher button:hover {
+            background-color: #000;
+        }
+
+        /* Мобильная адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+            .container {
+                width: 95%;
+                font-size: 1em;
+            }
+            .container h2 {
+                font-size: 1.6em;
+            }
+            .language-switcher button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="main-title">Momento Cafe Bar</h1>
+    <img src="images/949CCBD4-AA18-4A32-A739-E0E0876B61A9.jpeg" alt="Momento Cafe Bar" style="max-width: 100%; height: auto; margin-top: 20px;">
+    <p id="subtitle">Ваш уютный уголок для отдыха</p>
+    <div class="language-switcher">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('ru')">Русский</button>
+        <button onclick="changeLanguage('el')">Ελληνικά</button>
+    </div>
+</header>
+
+<nav>
+    <a href="about.html" id="about-link">О нас</a>
+    <a href="menu.html" id="menu-link">Меню</a>
+    <a href="contact.html" id="contact-link">Контакты</a>
+    <a href="social.html" id="social-link">Соцсети</a>
+</nav>
+
+<div class="container">
+    <h2 id="welcome-title">Добро пожаловать в Momento Cafe Bar!</h2>
+    <p id="welcome-text">Momento Cafe Bar — место, где каждый момент превращается в незабываемое событие! Начните свой день с ароматного кофе и насладитесь уединенной атмосферой до 22:30. После этого наш бар превращается в ночной клуб, где музыка не остановится до последнего клиента!</p>
+    <p id="details">Каждую пятницу и субботу здесь звучат лучшие хиты от диджеев, а в пятницу вас ожидает живая греческая музыка, которая добавит особую атмосферу. Летняя площадка откроет для вас мир кальянов и сочных шашлыков сувлаки, доступных только по воскресеньям в теплое время года.</p>
+    <p id="delivery">Не успели заглянуть к нам? Мы привезем ваш любимый кофе или напитки прямо к вам домой! Доставка работает с 13:00 до 21:00 каждый день.</p>
+    <p id="slogan">Momento Cafe Bar — место, где кофе, музыка и хорошее настроение всегда рядом!</p>
+</div>
+
+<div class="footer">
+    <p>© 2025 Momento Cafe Bar. Все права защищены.</p>
+</div>
+
+<script>
+    const translations = {
+        en: {
+            mainTitle: "Momento Cafe Bar",
+            subtitle: "Your cozy spot to relax",
+            aboutLink: "About Us",
+            menuLink: "Menu",
+            contactLink: "Contact",
+            socialLink: "Social Media",
+            welcomeTitle: "Welcome to Momento Cafe Bar!",
+            welcomeText: "Momento Cafe Bar is where every moment becomes an unforgettable event! Start your day with aromatic coffee and enjoy a cozy atmosphere until 22:30. After that, our bar turns into a nightclub where the music never stops until the last guest leaves!",
+            details: "Every Friday and Saturday, the best DJ hits fill the space, and on Fridays, live Greek music creates a unique ambiance. The summer terrace offers hookahs and delicious souvlaki, available only on Sundays during warm seasons.",
+            delivery: "Can't visit us? We'll deliver your favorite coffee or drinks straight to your home! Delivery operates daily from 13:00 to 21:00.",
+            slogan: "Momento Cafe Bar — where coffee, music, and good vibes are always around!"
+        },
+        ru: {
+            mainTitle: "Momento Cafe Bar",
+            subtitle: "Ваш уютный уголок для отдыха",
+            aboutLink: "О нас",
+            menuLink: "Меню",
+            contactLink: "Контакты",
+            socialLink: "Соцсети",
+            welcomeTitle: "Добро пожаловать в Momento Cafe Bar!",
+            welcomeText: "Momento Cafe Bar — место, где каждый момент превращается в незабываемое событие! Начните свой день с ароматного кофе и насладитесь уединенной атмосферой до 22:30. После этого наш бар превращается в ночной клуб, где музыка не остановится до последнего клиента!",
+            details: "Каждую пятницу и субботу здесь звучат лучшие хиты от диджеев, а в пятницу вас ожидает живая греческая музыка, которая добавит особую атмосферу. Летняя площадка откроет для вас мир кальянов и сочных шашлыков сувлаки, доступных только по воскресеньям в теплое время года.",
+            delivery: "Не успели заглянуть к нам? Мы привезем ваш любимый кофе или напитки прямо к вам домой! Доставка работает с 13:00 до 21:00 каждый день.",
+            slogan: "Momento Cafe Bar — место, где кофе, музыка и хорошее настроение всегда рядом!"
+        },
+        el: {
+            mainTitle: "Momento Cafe Bar",
+            subtitle: "Το ζεστό σας μέρος για χαλάρωση",
+            aboutLink: "Σχετικά με εμάς",
+            menuLink: "Μενού",
+            contactLink: "Επικοινωνία",
+            socialLink: "Κοινωνικά μέσα",
+            welcomeTitle: "Καλώς ήρθατε στο Momento Cafe Bar!",
+            welcomeText: "Το Momento Cafe Bar είναι το μέρος όπου κάθε στιγμή γίνεται αξέχαστη! Ξεκινήστε τη μέρα σας με αρωματικό καφέ και απολαύστε μια ήρεμη ατμόσφαιρα μέχρι τις 22:30. Μετά, το μπαρ μας μετατρέπεται σε νυχτερινό κλαμπ όπου η μουσική συνεχίζεται μέχρι και τον τελευταίο πελάτη!",
+            details: "Κάθε Παρασκευή και Σάββατο, οι καλύτερες επιτυχίες από DJs γεμίζουν τον χώρο, και τις Παρασκευές, η ζωντανή ελληνική μουσική δημιουργεί μια μοναδική ατμόσφαιρα. Η καλοκαιρινή βεράντα προσφέρει ναργιλέδες και νόστιμο σουβλάκι, διαθέσιμο μόνο τις Κυριακές κατά τη διάρκεια των ζεστών μηνών.",
+            delivery: "Δεν μπορείτε να μας επισκεφθείτε; Θα σας παραδώσουμε τον αγαπημένο σας καφέ ή ποτά στο σπίτι σας! Η παράδοση λειτουργεί καθημερινά από τις 13:00 έως τις 21:00.",
+            slogan: "Momento Cafe Bar — όπου ο καφές, η μουσική και η καλή διάθεση είναι πάντα κοντά σας!"
+        }
+    };
+
+    function changeLanguage(lang) {
+        const translation = translations[lang];
+        document.getElementById('main-title').innerText = translation.mainTitle;
+        document.getElementById('subtitle').innerText = translation.subtitle;
+        document.getElementById('about-link').innerText = translation.aboutLink;
+        document.getElementById('menu-link').innerText = translation.menuLink;
+        document.getElementById('contact-link').innerText = translation.contactLink;
+        document.getElementById('social-link').innerText = translation.socialLink;
+        document.getElementById('welcome-title').innerText = translation.welcomeTitle;
+        document.getElementById('welcome-text').innerText = translation.welcomeText;
+        document.getElementById('details').innerText = translation.details;
+        document.getElementById('delivery').innerText = translation.delivery;
+        document.getElementById('slogan').innerText = translation.slogan;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Контакты - Momento Cafe Bar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #800020; /* Бордовый */
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      width: 80%;
+      margin: 20px auto;
+      text-align: center;
+    }
+    section h2 {
+      color: #800020;
+    }
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #000;
+      color: #fff;
+      margin-top: 30px;
+    }
+    .language-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .language-buttons button {
+      background-color: #800020;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .language-buttons button:hover {
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="contact-header">Контакты</h1>
+    <div class="language-buttons">
+      <button onclick="changeLanguage('ru')">Русский</button>
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('el')">Ελληνικά</button>
+    </div>
+  </header>
+  <nav>
+    <a href="index.html" id="main-link">Главная</a>
+    <a href="menu.html" id="menu-link">Меню</a>
+    <a href="about.html" id="about-link">О нас</a>
+    <a href="social.html" id="social-link">Соцсети</a>
+  </nav>
+  <section>
+    <h2 id="contact-description">Свяжитесь с нами</h2>
+    <p id="contact-info">Ваши мысли и предложения важны для нас. Мы будем рады услышать их!</p>
+    <p>📨 tsaxourkuriakos@gmail.com</p>
+    <p>📞 +30 251 039 1646</p>
+    <p>655 00 Αμυγδαλεώνας, Греция</p>
+  </section>
+  <div class="footer">
+    <p>© 2025 Momento Cafe Bar. Все права защищены.</p>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "Contact - Momento Cafe Bar",
+        contactHeader: "Contact",
+        mainLink: "Home",
+        menuLink: "Menu",
+        aboutLink: "About Us",
+        socialLink: "Social Media",
+        contactDescription: "Get in Touch",
+        contactInfo: "Your thoughts and suggestions are important to us. We’d love to hear from you!"
+      },
+      ru: {
+        pageTitle: "Контакты - Momento Cafe Bar",
+        contactHeader: "Контакты",
+        mainLink: "Главная",
+        menuLink: "Меню",
+        aboutLink: "О нас",
+        socialLink: "Соцсети",
+        contactDescription: "Свяжитесь с нами",
+        contactInfo: "Ваши мысли и предложения важны для нас. Мы будем рады услышать их!"
+      },
+      el: {
+        pageTitle: "Επικοινωνία - Momento Cafe Bar",
+        contactHeader: "Επικοινωνία",
+        mainLink: "Αρχική",
+        menuLink: "Μενού",
+        aboutLink: "Σχετικά με εμάς",
+        socialLink: "Κοινωνικά μέσα",
+        contactDescription: "Επικοινωνήστε μαζί μας",
+        contactInfo: "Οι σκέψεις και οι προτάσεις σας είναι σημαντικές για εμάς. Θα θέλαμε να τις ακούσουμε!"
+      }
+    };
+
+    function changeLanguage(lang) {
+      const translation = translations[lang];
+      document.getElementById('page-title').innerText = translation.pageTitle;
+      document.getElementById('contact-header').innerText = translation.contactHeader;
+      document.getElementById('main-link').innerText = translation.mainLink;
+      document.getElementById('menu-link').innerText = translation.menuLink;
+      document.getElementById('about-link').innerText = translation.aboutLink;
+      document.getElementById('social-link').innerText = translation.socialLink;
+      document.getElementById('contact-description').innerText = translation.contactDescription;
+      document.getElementById('contact-info').innerText = translation.contactInfo;
+    }
+  </script>
+</body>
+</html>
